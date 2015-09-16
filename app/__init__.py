@@ -4,6 +4,9 @@ from flask import Flask
 
 from app.models import db
 from app.controllers.main import main
+from app.controllers.auth import auth
+from app.controllers.profile import profile
+from app.controllers.authorize import authorize
 
 from app.tpl_filter import tpl_filter
 
