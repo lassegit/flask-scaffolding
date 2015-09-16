@@ -41,10 +41,14 @@ Set up uwsgi for production: https://github.com/mking/flask-uwsgi
 
 ## Credits
 Build on top of https://github.com/JackStouffer/Flask-Foundation
+
 With the BackboneJS frontend from https://github.com/yeoman/generator-backbone
 
 ## Readmore
 Flask documentation: http://flask.pocoo.org/docs/0.10/
+
 Flask SQLAlchemy documentation: https://pythonhosted.org/Flask-SQLAlchemy/index.html
+
 Flask Cache documentation: https://pythonhosted.org/Flask-Cache/
+
 Flask Oauthlib documentation: https://flask-oauthlib.readthedocs.org/en/latest/
