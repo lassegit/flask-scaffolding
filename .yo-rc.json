@@ -1,7 +1,7 @@
 {
   "generator-backbone": {
     "appPath": "app/static",
-    "appName": "PodcastsSpace",
+    "appName": "Flask-APP",
     "coffee": false,
     "testFramework": "mocha",
     "templateFramework": "handlebars",

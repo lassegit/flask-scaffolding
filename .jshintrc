@@ -17,8 +17,6 @@
     "strict": true,
     "jquery": true,
     "globals": {
-        "PodcastsSpace": true,
-        "podcastsspace": true,
         "_": false,
         "Backbone": false,
         "JST": false,
