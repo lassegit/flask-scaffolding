@@ -1,0 +1,86 @@
+.front {
+    .jumbotron {
+        padding:60px;
+        margin-bottom: 0;
+
+        h1 {
+            margin-bottom: 20px;
+            text-shadow: 1px 2px 2px #777;
+            @media (min-width: 992px) {
+                font-size: 60px;
+            }
+        }
+
+        p {
+            font-size: 20px;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 1px #777;
+            font-weight: 300;
+            a {
+                color:#FAD5D4;
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+
+        @media (max-width: 500px) {
+            .btn {
+                display: block;
+                margin-bottom: 20px;
+                margin:0 auto 20px auto;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    .vision {
+        background: #f8f8f8;
+        padding:30px 0 10px 0;
+        h2 {
+            font-weight: 300;
+            margin-top:0;
+            font-size: 35px;
+            line-height: 45px;
+        }
+
+        b {
+            font-weight: 400;
+        }
+
+        p {
+            font-weight: 500;
+        }
+    }
+
+    .sales-pitch {
+        .sales-visual {
+            margin-top:10px;
+
+            .glyphicon {
+                color:#e52d27;
+                font-size: 55px;
+            }
+        }
+
+        h3 {
+            font-weight: 300;
+        }
+    }
+
+    .sales-latest {
+        hr {
+            width:50%;
+        }
+
+        .comma:last-child {
+            display:none;
+        }
+    }
+
+    .container {
+        clear:both;
+    }
+}

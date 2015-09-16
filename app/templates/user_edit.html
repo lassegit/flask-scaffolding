@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+
+{% block title %}Edit{% endblock %}
+
+{% block body %}
+    <div class="jumbotron">
+        <div class="container">
+            <h1>Edit</h1>
+        </div>
+    </div>
+
+    {% include "alert.html" %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+
+                <ul class="nav nav-tabs">
+                    <li role="presentation"><a href="/user">Profile</a></li>
+                    <li role="presentation" class="active"><a href="/user/edit">Edit</a></li>
+                </ul>
+
+                <form role="form" method="post" class="offset-top">
+                    {{ form.hidden_tag() }}
+
+                    <div class="form-group">
+                       {% if form.username.errors %}
+                            {% for e in form.username.errors %}
+                                <div class="help-block alert alert-danger">{{ e }}</div>
+                            {% endfor %}
+                        {% endif %}
+                        {{ form.username(class_="form-control", placeholder="Username") }}
+                    </div>
+
+                    <div class="form-group">
+                        {% if form.email.errors %}
+                            {% for e in form.email.errors %}
+                                <div class="help-block alert alert-danger">{{ e }}</div>
+                            {% endfor %}
+                        {% endif %} 
+                        {{ form.email(class_="form-control", placeholder="Email") }}
+                    </div>
+
+                    <div class="form-group">
+                        {% if form.password.errors %}
+                            {% for e in form.password.errors %}
+                                <div class="help-block alert alert-danger">{{ e }}</div>
+                            {% endfor %}
+                        {% endif %}
+                        {{ form.password(class_="form-control", placeholder="Password") }}
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">
+                        <span class="glyphicon glyphicon-ok"></span> 
+                        Update
+                    </button>
+
+                    <a class="btn btn-default" href="/user" title="Back to profile">
+                        <span class="glyphicon glyphicon-remove"></span>
+                        Cancel
+                    </a>
+                </form>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,12 @@
+{
+  "generator-backbone": {
+    "appPath": "app/static",
+    "appName": "PodcastsSpace",
+    "coffee": false,
+    "testFramework": "mocha",
+    "templateFramework": "handlebars",
+    "sassBootstrap": false,
+    "includeRequireJS": true
+  },
+  "generator-mocha": {}
+}

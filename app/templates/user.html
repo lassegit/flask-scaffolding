@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}{{current_user.username}}{% endblock %}
+
+{% block body %}
+    <div class="jumbotron">
+        <div class="container">
+            <h1>{{current_user.username}}</h1>
+        </div>
+    </div>
+
+    {% include "alert.html" %}
+    
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-6">
+                <ul class="nav nav-tabs">
+                    <li role="presentation" class="active"><a href="/user">Profile</a></li>
+                    <li role="presentation"><a href="/user/edit">Edit</a></li>
+                </ul>
+
+                <p class="offset-top">Signed up {{current_user.created_at | timeago}}.</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

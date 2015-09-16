@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}Blah blah and blah...{% endblock %}
+
+{% block meta%}
+    <meta property="og:title" content="">
+    <meta property="og:image" content="">
+    <meta property="og:description" content="">
+{% endblock %}
+
+{% block body %}
+<div class="front">
+    <div class="jumbotron">
+        <div class="container text-center">
+            <h1>Blah blah and blah...</h1>
+        </div>
+    </div>
+
+    {% include "alert.html" %}
+
+    <div class="container">
+        <p>Blah blah and blah....</p>
+    </div>
+</div>
+{% endblock %}

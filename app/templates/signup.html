@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block title %}Signup{% endblock %}
+
+{% block body %}
+<div class="auth-form">
+    <div class="container">
+
+        <div class="offset-top">{% include "alert.html" %}</div>
+        
+        <h1 class="text-center text-muted h2">Sign up</h1>
+        
+        <div class="row">
+
+            <div class="col-md-6 col-md-offset-3 well offset-top">
+                <div class="social-links">
+                    <a href="{{'/oauth2/facebook' | next_param}}" title="Sign up with Google" class="btn btn-primary facebook">Sign up with Facebook</a>
+
+                    <a href="{{'/oauth2/google' | next_param}}" title="Sign up with Google" class="btn btn-danger google pull-right">Sign up with Google</a>
+                </div>
+                
+                <hr>
+                
+                <p class="text-center text-muted">Or</p>
+
+                <form role="form" method="post">
+                    {{ form.hidden_tag() }}
+
+                    <div class="form-group">
+                        {% if form.email.errors %}
+                            {% for e in form.email.errors %}
+                                <div class="help-block alert alert-danger">{{ e }}</div>
+                            {% endfor %}
+                        {% endif %} 
+                        {{ form.email(class_="form-control", placeholder="Email") }}
+                    </div>
+
+                    <div class="form-group">
+                       {% if form.username.errors %}
+                            {% for e in form.username.errors %}
+                                <div class="help-block alert alert-danger">{{ e }}</div>
+                            {% endfor %}
+                        {% endif %}
+                        {{ form.username(class_="form-control", placeholder="Username") }}
+                    </div>
+
+                    <div class="form-group">
+                        {% if form.password.errors %}
+                            {% for e in form.password.errors %}
+                                <div class="help-block alert alert-danger">{{ e }}</div>
+                            {% endfor %}
+                        {% endif %}
+                        {{ form.password(class_="form-control", placeholder="Password") }}
+                    </div>
+
+                    <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-ok"></span> Sign up</button>
+
+                    <a href="{{'/login' | next_param}}" title="Login" class="btn pull-right">Login</a>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endblock %}
