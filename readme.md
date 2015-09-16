@@ -9,6 +9,8 @@ bower install
 npm install
 
 make env
+
+./manage createdb
 ````
 
 ## Run
@@ -23,7 +25,6 @@ yo backbone:model blog
 yo backbone:collection blog
 yo backbone:router blog
 yo backbone:view blog
-
 ````
 
 This is taken from Yeoman.io's BackboneJS project.
@@ -34,3 +35,7 @@ Run `grunt build`.
 
 ## More
 Set up uwsgi for production: https://github.com/mking/flask-uwsgi
+
+## Credits
+Build on top of https://github.com/JackStouffer/Flask-Foundation
+With the BackboneJS frontend from https://github.com/yeoman/generator-backbone
