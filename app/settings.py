@@ -12,7 +12,10 @@ class ProdConfig(Config):
     SQLALCHEMY_DATABASE_URI = "mysql://USER:PASSWORD@localhost/DATABASE"
     SQLALCHEMY_POOL_TIMEOUT = 30
 
-    CACHE_TYPE = "memcached"
+    CACHE_TYPE = "simple"
+
+    PORT = "5001"
+    HOST = "127.0.0.1"
 
     STATIC_FOLDER = "dist"
     TEMPLATE_FOLDER = "dist"
@@ -27,7 +30,7 @@ class DevConfig(Config):
     SQLALCHEMY_DATABASE_URI = "mysql://USER:PASSWORD@localhost/DATABASE"
     SQLALCHEMY_POOL_TIMEOUT = 30
 
-    CACHE_TYPE = "memcached"
+    CACHE_TYPE = "simple"
 
     STATIC_FOLDER = "static"
     TEMPLATE_FOLDER = "templates"

@@ -11,14 +11,23 @@ bower install
 
 npm install
 
-make env
+virtualenv -p /usr/local/bin/python3 venv (path to your python 3 installation)
+
+. venv/bin/activate
+
+make deps
 
 ./manage createdb
+
+./manage server (or run uwsgi --ini uwsgi.ini --py-autoreload 1)
+
+grunt watch (grunt build)
+
 ````
 
 ## Run
 ````
-make dev or make prod
+make dev or make prod (check commands in Makefile)
 ````
 
 ## Develop
@@ -30,7 +39,7 @@ yo backbone:router blog
 yo backbone:view blog
 ````
 
-This is taken from Yeoman.io's BackboneJS project.
+This is taken from [Yeoman.io's BackboneJS project](https://github.com/yeoman/generator-backbone).
 
 
 ## Deploy

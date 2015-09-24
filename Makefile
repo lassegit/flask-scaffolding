@@ -8,9 +8,7 @@ help:
 	@echo "  test        run all your tests using py.test"
 
 env:
-	sudo easy_install pip && \
-	pip install virtualenv && \
-	virtualenv venv && \
+	virtualenv -p /usr/local/bin/python3 venv && \
 	. venv/bin/activate && \
 	make deps
 
