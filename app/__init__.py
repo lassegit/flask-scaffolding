@@ -1,6 +1,8 @@
 #! ../env/bin/python
 
 from flask import Flask
+import logging
+from logging.handlers import RotatingFileHandler
 
 from app.models import db
 from app.controllers.main import main
@@ -66,8 +68,6 @@ def create_app(object_name, env="prod"):
     app.register_blueprint(tpl_filter)
 
     if app.config["ENV"] == "prod":   
-        import logging
-        from logging.handlers import RotatingFileHandler
         file_handler = RotatingFileHandler('app.log', maxBytes=1024 * 1024 * 100, backupCount=20)
         formatter = logging.Formatter( "%(asctime)s | %(pathname)s:%(lineno)d | %(funcName)s | %(levelname)s | %(message)s ")
         file_handler.setFormatter(formatter)
