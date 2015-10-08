@@ -17,18 +17,22 @@ virtualenv -p /usr/local/bin/python3 venv (path to your python 3 installation)
 
 make deps
 
-./manage createdb
+./manage.py createdb
 
-./manage server (or run uwsgi --ini uwsgi.ini --py-autoreload 1)
+./manage.py server (or run uwsgi --ini uwsgi.ini --py-autoreload 1)
 
-grunt watch (grunt build)
+grunt watch
 
 ````
+
+`grunt build` creates a app/dist folder with all the assets (js, css, templates, fonts) for deployment.
 
 ## Run
 ````
 make dev or make prod (check commands in Makefile)
 ````
+
+You can also run it via `./manage.py runserver` if you don't want to use uwsgi.
 
 ## Develop
 The following command auto generates various Backbone MVC:
@@ -40,7 +44,6 @@ yo backbone:view blog
 ````
 
 This is taken from [Yeoman.io's BackboneJS project](https://github.com/yeoman/generator-backbone).
-
 
 ## Deploy
 Run `grunt build`.
