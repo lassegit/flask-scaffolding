@@ -172,7 +172,7 @@ module.exports = function (grunt) {
                     paths: {
                         'templates': '../../../<%= yeoman.app %>/scripts/templates',
                         'jquery': '../../../<%= yeoman.app %>/bower_components/jquery/dist/jquery',
-                        'underscore': '../../../<%= yeoman.app %>/bower_components/lodash/lodash',
+                        'underscore': '../../../<%= yeoman.app %>/bower_components/underscore/underscore',
                         'backbone': '../../../<%= yeoman.app %>/bower_components/backbone/backbone'
                     },
                     // TODO: Figure out how to make sourcemaps work with grunt-usemin
@@ -224,6 +224,7 @@ module.exports = function (grunt) {
                 options: {
                     removeComments: true,
                     collapseWhitespace: true,
+                    // Wrap ignore markup in: <!-- htmlmin:ignore --> (could be <img src="{{url.png}}">)
                     // removeCommentsFromCDATA: true,
                     // https://github.com/yeoman/grunt-usemin/issues/44
                     // collapseBooleanAttributes: true,
@@ -255,7 +256,7 @@ module.exports = function (grunt) {
                     ]
                 },{
                     dest: '<%= yeoman.dist %>/bower_components/requirejs/require.js',
-                    src: '<%= yeoman.app %>/bower_components/requirejs/require.min.js',
+                    src: '<%= yeoman.app %>/bower_components/requirejs/require.js',
                 }]
             }
         },
