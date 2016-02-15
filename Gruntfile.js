@@ -224,6 +224,7 @@ module.exports = function (grunt) {
                 options: {
                     removeComments: true,
                     collapseWhitespace: true,
+                    conservativeCollapse: true,
                     // Wrap ignore markup in: <!-- htmlmin:ignore --> (could be <img src="{{url.png}}">)
                     // removeCommentsFromCDATA: true,
                     // https://github.com/yeoman/grunt-usemin/issues/44
