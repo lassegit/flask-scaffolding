@@ -1,9 +1,7 @@
 define([
-    'jquery',
-    'underscore',
-    'backbone',
-    'templates',
+    'jquery', 'underscore', 'backbone', 'templates',
 ], function ($, _, Backbone, JST) {
+    
     Backbone.View.prototype.scrollTop = function() {
         $('html,body').animate({
             scrollTop: 0
@@ -24,4 +22,5 @@ define([
 
         $('#alert-wrapper').html(alert);
     }
+
 });

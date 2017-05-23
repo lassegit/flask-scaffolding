@@ -26,7 +26,7 @@ require([
     window.app = {
         views: {},
         models: {},
-        collections: {}
+        collections: {},
     };
 
     var Router = Backbone.Router.extend({
@@ -36,7 +36,7 @@ require([
         },
         
         initialize: function() {
-            $('[data-toggle="tooltip"]').tooltip(); // Run Bootstrap's tooltip
+            $('[data-toggle="tooltip"]').tooltip();
         },
 
         index: function() {},
@@ -45,7 +45,7 @@ require([
     });
 
     window.Router = new Router();
-    Backbone.history.start({pushState:true});
+    Backbone.history.start({ pushState:true });
 
     $.ajaxSetup({
         headers: {

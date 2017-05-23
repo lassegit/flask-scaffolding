@@ -5,6 +5,7 @@ define([
     'templates',
 ], function ($, _, Backbone, JST) {
     'use strict';
+    
     // If equals cheating helper
     Handlebars.registerHelper('equal', function(lvalue, rvalue, options) {
         if (arguments.length < 3)
